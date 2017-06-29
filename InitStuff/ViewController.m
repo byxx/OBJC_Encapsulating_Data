@@ -27,7 +27,10 @@
     NSLog(@"%@", firstName);
     //Setter der Property firstName, method has same Name w/get keyword
     [somePerson setFirstName:@"Johnny"];
+    somePerson.firstName = @"Heinz";
     NSLog(@"%@", somePerson.firstName);
+    
+    //Most properties are backed by instance variables
 }
 
 @end
