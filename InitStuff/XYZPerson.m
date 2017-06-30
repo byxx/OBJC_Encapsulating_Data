@@ -8,6 +8,7 @@
 
 #import "XYZPerson.h"
 //(Create the interface in .h) Create the implementation in .m
+//and so on
 
 @implementation XYZPerson
 
