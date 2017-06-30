@@ -22,21 +22,34 @@
 -(int) magicNumber{
     return 42;
 }
-
-
 //Initialisation method:
 //"initFamily", initializer methods only work with initial init--- methodName!
 
 //Convenience Initializer (ohne dateOfBirth)
--(id) initWithFirstName: (NSString *) aFirstName secondName:(NSString *) aLastName {
-    return [self initWithFirstName:aFirstName secondName:aLastName dateOfBirth: nil];
+-(id) initWithFirstName: (NSString *) aFirstName lastName:(NSString *) aLastName {
+    return [self initWithFirstName:aFirstName lastName:aLastName dateOfBirth:nil];
 }
 
--(NSString *) magicString: (NSString *) lowercaseString {
+-(id) init {
     
+    return [self initWithFirstName:@"John" lastName:@"Doe" dateOfBirth:nil];
+}
+
+
+-(NSString *) magicString: (NSString *) lowercaseString {
     NSString *stringToReturn = [lowercaseString uppercaseString];
     NSLog(@"%@", stringToReturn);
     return stringToReturn;
 }
+//Lazy Accessor:
+//-(XYZObject *) someImportantObject {
+//    if (!_someImportantObject) {
+//        _someImportantObject = [[XYZObject alloc]init];
+//
+//    }
+//
+//    return someImportantObject;
+//}
+
 
 @end

@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     //Before an object can be used, it must be created properly using a combination of memory allocation for its properties and any necessary initialization of its internal values. This chapter describes how to nest the method calls to allocate and initialize an object in order to ensure that it is configured correctly.
     XYZPerson *somePerson = [[XYZPerson alloc]init];
     
@@ -38,9 +36,8 @@
     NSLog(@"%@", somePerson.firstName);
     NSString *hi = [somePerson magicString:@"haaalloooo"]; //HAAALLOOOO
     NSLog(@"%@ nochmal", hi);// HAAALLOOOO nochmal
- 
     
-    
+    [somePerson initWithFirstName:@"Heinz" lastName:@"Ketchup" dateOfBirth:nil];
 }
 
 @end

@@ -11,7 +11,7 @@
 @interface XYZPerson : NSObject
 @property (nonatomic) NSString *firstName;
 @property (nonatomic) NSString *lastName;
-@property (nonatomic) NSNumber *dateOfBirth;
+@property (nonatomic) NSDate *dateOfBirth;
 
 //instance Methods -
 -(void) sayHello;
@@ -20,6 +20,8 @@
 +(void) person;
 
 -(int) magicNumber;
+
+-(XYZObject *) someImportantObject;
 
 -(NSString *) magicString: (NSString *) lowercaseString;
 
@@ -32,12 +34,12 @@
 //a) className init
 //b) initialization method like so:
 
--(id) initWithFirstName: (NSString *) aFirstName secondName:(NSString *) aLastName;
 
 //Designated Initializer
--(id) initWithFirstName:(NSString *)aFirstName secondName:(NSString *)aLastName dateOfBirth:(NSNumber *) aDOB;
+-(id) initWithFirstName:(NSString *)aFirstName lastName:(NSString *)aLastName dateOfBirth:(NSDate *) aDOB;
 
+-(id) initWithFirstName: (NSString *) aFirstName lastName:(NSString *) aLastName;
 
-
+-(id) init;
 
 @end
